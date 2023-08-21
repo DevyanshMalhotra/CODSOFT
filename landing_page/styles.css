@@ -1,0 +1,288 @@
+:root {
+  --btn:#8a8e8e;
+  --bgC: #e6e9ea;
+  --bt:black; 
+  --bar: #878d8d;
+  --font: black;
+}
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  font-family: "Josefin Sans", sans-serif;
+  font-family: "Lora", serif;
+  font-family: "Ubuntu", sans-serif;
+  font-family: "Varela", sans-serif;
+  font-family: "Varela Round", sans-serif;
+  width: 100%;
+  min-height: 100vh;
+  max-width: 81rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--bgc);
+}
+
+.head {
+  background-color: var(--bar);
+  max-width: 81rem;
+  min-width: 250px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+}
+
+.hname {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: var(--font);
+  font-weight: bold;
+  font-size: 40px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.litems ul {
+  display: flex;
+}
+
+.litems ul li{
+  list-style: none;
+  margin-right: 20px;
+  align-items: center;
+}
+
+ul li a {
+  text-decoration: none;
+  color: var(--font);
+  display: inline-block;
+  transition: all 0.4s;
+}
+
+ul li a:hover {
+  color: var(--font);
+  font-weight: bold;
+  transform: scale(1.10);
+}
+
+ul li a:active {
+  color: var(--font);
+  transform: scale(1.05);
+}
+
+.menu-icon {
+  display: none; 
+  cursor: pointer;
+}
+
+.bod{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  max-width: 81rem;
+  width: 100%;
+  margin: 0 auto;
+  flex-grow: 1;
+  background-color: var(--bgC);
+}
+
+.left h1:nth-child(2) {
+  margin-bottom: 30px;
+}
+
+.left,
+.right {
+  width: 50%;
+  padding: 20px;
+  box-sizing: border-box;
+  min-width: 300px;
+}
+
+.left p {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 600px) {
+  .hname{
+    margin-bottom: 7px;
+  }
+  .bod {
+    flex-direction: column;
+  }
+  .left, .right {
+    width: 100%;
+  }
+  .menu-icon {
+    display: block;
+  }
+
+}
+
+.cta button {
+  background-color:var(--btn) ;
+  height: 30px;
+  width: 150px;
+  font-size: 20px;
+  font-weight: bolder;
+  border: none;
+  cursor: pointer;
+  border-radius: 40px;
+  transition: all 0.1s;
+}
+
+.cta a{
+  text-decoration: none;
+  color: var(--font);
+}
+
+.cta button:hover {
+  border: 1px solid black;
+  box-shadow: 0 0 4px 2px #6f7272 ;
+}
+
+.right img {
+  width: 100%;
+  border-radius: 40px;
+}
+
+.sidebars {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: var(--bgC);
+}
+.sidebarWrapper {
+  padding: 5px;
+  flex: 50%;
+}
+.sidebar {
+  height: 100%;
+  width: 100%;
+  border-radius: 20px;
+  padding: 10px 30px;
+}
+
+.sidebar h3 {
+  color: var(--font);
+  font-size: 30px;
+}
+
+.sidebar ul {
+  padding-top: 8px;
+}
+#leftsidebar ul li {
+  padding: 4px 0 4px 10px;
+  list-style-image: url(arrow.png);
+  min-width: 300px;
+}
+
+#rightsidebar ul li {
+  padding: 15px 0 15px 20px;
+  list-style-image: url(arrow.png);
+  min-width: 300px;
+}
+.sidebar ul li a {
+  text-decoration: none;
+  font-size: 20px;
+  color: var(--font);
+  transition: all .5s ease;
+}
+
+.sidebar ul li a:hover,
+.sidebar ul li a.active {
+  text-decoration: none;
+  color: var(--font);
+  
+  font-weight: 30px;
+}
+
+.clear {
+  clear: both;
+}
+
+.contact-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: var(--bgC);
+}
+
+.contact-info{
+  width: 100%;
+  max-width: 300px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.contact-info a {
+  color: var(--font);
+}
+
+#cnct a{
+  text-decoration: none;
+}
+
+.foot {
+  position: relative;
+  display: flex;
+  background-color:var(--bar);
+  align-items: center;
+  max-width: 81rem;
+  width: 100%;
+  margin: 0 auto;
+  flex-shrink: 0;
+}
+
+.foot-btn button{
+  
+  flex-grow: 1;
+}
+
+.foot-cnt{
+  flex-grow: 3;
+  display: flex;
+  justify-content: center;
+}
+
+.theme-toggle {
+  display: inline-block;
+  cursor: pointer;
+  border: none;
+  background: var(--bgC);
+  color: var(--bt);
+  outline: none;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  font-size: 1.1rem;
+}
+
+.theme-toggle i {
+  line-height: 40px;
+}
+
+.dark-theme {
+  --bgC: #3a3d3e;
+  --bt:white;
+  --font:lightgrey;
+  --bar:rgb(40, 39, 39);
+  background-color: var(--bgC);
+  color: var(--font);
+}
+
